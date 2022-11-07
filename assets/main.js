@@ -20,7 +20,7 @@ let students = [
     { name: 'Francesca', id: 120, grades: 84 },
   ];
 
-  console.log(students)
+  console.log("array iniziale",students)
 // 1- Dobbiamo creare delle targhe con il loro nome in maiuscolo. Ci serve quindi un nuovo array di stringhe. Ogni elemento del nuovo array sarà il nome dello studente ma con tutte le lettere maiuscole.
 
 
@@ -33,7 +33,7 @@ const arr2 = students.map( ({name,id,grades,}) => {
     
   } )
 
-  console.log(arr2)
+  console.log("array con maiuscole",arr2)
 
 
 
@@ -41,29 +41,23 @@ const arr2 = students.map( ({name,id,grades,}) => {
 // 2-  Dobbiamo creare un nuovo array con gli studenti che hanno un totale di voti superiore a 70
 
 
-const arr3 = arr2.map(({name,grades})=>{
-    if(grades >= 70){
-        return {name, grades}
-    }else{
-        return arr2.shift()
-    }
+const arr3 = arr2.filter((element)=>{
+    if(element.grades >= 70){
+        return true
+    
+}
 })
 
-console.log(arr3)
+console.log("array filtrato per voti",arr3)
 // 3-  Dobbiamo creare un nuovo array di tutti gli studenti che hanno un totale di voti superiore a 70 e id superiore a 120
 
-const arr4 = students.map(({name,grades,id})=>{
-    if(grades >= 70 && id >= 120){
-        return {name, grades, id}
-    }else{
-        students.splice()
-    }
-        
-    
-    
+const arr4 = students.filter((element)=>{
+    if(element.grades >= 70 && element.id >= 120){
+        return true
+}
 })
 
-console.log(arr4)
+console.log("array filtrato per nomi e gradi",arr4)
 
 
 
