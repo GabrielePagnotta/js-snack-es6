@@ -1,10 +1,10 @@
 // Snack 1
 // Dato l'array di nomi:
-const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
-const array2 =[];
+// const myArray = ['Michele', 'Fabio', 'Roberto', 'Giovanni', 'Simone', 'Chiara'];
+// const array2 =[];
 
-let min = prompt("inserisci numero minimo");
-let max = prompt("inserisci numero massimo")
+// let min = prompt("inserisci numero minimo");
+// let max = prompt("inserisci numero massimo")
 
 // myArray.forEach((element,index) => {
 //     if(index >= min && index <= max){
@@ -14,13 +14,13 @@ let max = prompt("inserisci numero massimo")
 // console.log(array2)
 
 
-const array3 = myArray.filter((element,index)=>{
-    if(index >= min && index <= max){
-        return true;
-    }
-})
+// const array3 = myArray.filter((element,index)=>{
+//     if(index >= min && index <= max){
+//         return true;
+//     }
+// })
 
-console.log(array3)
+// console.log(array3)
 
 
 
@@ -47,9 +47,6 @@ console.log(array3)
 // // 1- Dobbiamo creare delle targhe con il loro nome in maiuscolo. Ci serve quindi un nuovo array di stringhe. Ogni elemento del nuovo array sarà il nome dello studente ma con tutte le lettere maiuscole.
 
 
-
-
-
 // const arr2 = students.map( ({name,id,grades,}) => {
 //    name = name.toUpperCase()
 //     return{name,id,grades}
@@ -57,8 +54,6 @@ console.log(array3)
 //   } )
 
 //   console.log("array con maiuscole",arr2)
-
-
 
 
 // // 2-  Dobbiamo creare un nuovo array con gli studenti che hanno un totale di voti superiore a 70
@@ -81,6 +76,78 @@ console.log(array3)
 // })
 
 // console.log("array filtrato per nomi e gradi",arr4)
+
+
+// Snack 3:
+// let display = document.getElementById("output")
+// // Creare un array di oggetti: Ogni oggetto descriverà una bici da corsa con le seguenti proprietà: nome e peso.
+
+// const bike = [{
+//     nome:"bmc",
+//     peso: 20,
+// },
+// {
+
+//     nome:"ORBEA",
+//     peso: 5,
+// },
+// {
+//  y: 10,
+// }
+// ];
+
+
+
+// const arrai2 = bike.map(({y, nome, peso})=>{
+    
+//     if (peso < y) {
+//         console.log(peso, nome)
+//     }
+// })
+
+// console.log(arrai2)
+
+// Snack4
+// Creare un array di oggetti di squadre di calcio. Ogni squadra avrà diverse proprietà: nome, punti fatti, falli subiti.
+// Nome sarà l’unica proprietà da compilare, le altre saranno tutte settate a 0.
+    const teams =[{
+        nome:"napoli",
+        punti:0,
+        falli:0,
+    },
+    {
+        nome:"milan",
+        punti:0,
+        falli:0,
+    },
+    {
+        nome:"inter",
+        punti:0,
+        falli:0,
+    }
+];
+
+// Generare numeri random al posto degli 0 nelle proprietà: Punti fatti e falli subiti.
+//  Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
+
+function numerorandom (min, max){
+let random = Math.floor(Math.random() * max - min + 1);
+return random
+}
+
+
+
+const arraiu = teams.map(({nome, punti, falli})=>{
+punti = numerorandom (1, 10);
+falli = numerorandom (1, 10);
+return {nome, punti, falli}
+});
+
+console.log(arraiu);
+
+
+
+
 
 
 
